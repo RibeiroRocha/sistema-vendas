@@ -7,11 +7,18 @@
 @stop
 
 @section('content')
-    <a href="{{ route('users.create') }}">Novo Usuário</a>
+    {{--<a href="{{ route('users.create') }}">Novo Usuário</a>  criando botao--}} 
+    <div class="card">
+        <div class="card-body">
+            {{ $dataTable->table() }}
+        </div>
+    </div>
 @stop
 
 @section('css')
 @stop
 
 @section('js')
+
+    {{ $dataTable->scripts() }}
 @stop
