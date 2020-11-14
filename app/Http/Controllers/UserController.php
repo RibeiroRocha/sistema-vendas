@@ -22,7 +22,9 @@ class UserController extends Controller
     {
         User::create($request->all());
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')
+        //->withSucesso('Salvo com sucesso');
+        ->withErro('Erro ao Salvar');
     }
 
     public function show($id)
